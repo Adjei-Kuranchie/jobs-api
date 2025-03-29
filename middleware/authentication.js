@@ -11,7 +11,6 @@ const auth = function (req, res, next) {
 
   //get token from header
   const token = authHeader.split(" ")[1];
-  console.log(token);
 
   //verify token
   try {
