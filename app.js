@@ -4,6 +4,7 @@ const express = require("express");
 
 // security packages
 const helmet = require("helmet");
+const cors = require("cors");
 
 const authRouter = require("./routes/auth");
 const jobsRouter = require("./routes/jobs");
@@ -20,6 +21,7 @@ const authenticateUser = require("./middleware/authentication");
 app.use(express.json());
 // extra packages
 app.use(helmet());
+app.use(cors());
 
 // routes
 app.use("/api/v1/auth", authRouter);
